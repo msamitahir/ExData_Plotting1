@@ -34,8 +34,8 @@ png(filename = "plot4.png",width = 480,height = 480)
 # This will create plots in order : top left, bottom left, top right, bottom right
 par(mfcol = c(2,2))
 
-#First plot, same as plot 2
-with(sub_tbl, plot(datetime , Global_active_power,type = "l",ylab = "Global Active Power (kilowatts)", xlab = ""))
+#First plot, same as plot 2, EXCEPT for Y axis label
+with(sub_tbl, plot(datetime , Global_active_power,type = "l",ylab = "Global Active Power", xlab = ""))
 
 #Second plot, same as plot 3
 with(sub_tbl, {plot(datetime , Sub_metering_1 ,type = "l",ylab = "Energy sub metering", xlab = "")
