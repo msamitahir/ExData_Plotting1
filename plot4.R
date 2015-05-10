@@ -31,6 +31,7 @@ if(!exists("sub_tbl")) {
 png(filename = "plot4.png",width = 480,height = 480)
 
 # Since we need to make a 4 in 1 plot. We will set mfcols parameter first
+# This will create plots in order : top left, bottom left, top right, bottom right
 par(mfcol = c(2,2))
 
 #First plot, same as plot 2
