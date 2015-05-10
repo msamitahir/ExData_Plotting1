@@ -37,13 +37,13 @@ par(mfcol = c(2,2))
 #First plot, same as plot 2, EXCEPT for Y axis label
 with(sub_tbl, plot(datetime , Global_active_power,type = "l",ylab = "Global Active Power", xlab = ""))
 
-#Second plot, same as plot 3
+#Second plot, almost same as plot 3, EXCEPT for no box around the legend
 with(sub_tbl, {plot(datetime , Sub_metering_1 ,type = "l",ylab = "Energy sub metering", xlab = "")
                lines(datetime , Sub_metering_2, col = "red")
                lines(datetime , Sub_metering_3, col = "blue")})
 
-# Let's add the legend to the top right corner of the plot
-legend("topright",lty = 1,legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"))
+# Let's add the legend to the top right corner of the plot, bty = "n" for removing the box
+legend("topright",lty = 1,legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"), bty = "n")
 
 # Third plot, defaults are ok
 with(sub_tbl, plot(datetime , Voltage,type = "l"))
